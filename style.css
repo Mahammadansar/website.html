@@ -1,0 +1,478 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: red;
+
+}
+
+.detel{
+    margin-left: 8%;
+    margin-top: 13%;
+}
+
+.detel h1{
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+span{
+    color: orange;
+}
+.detel p{
+    color: #555;
+    line-height: 22px;
+
+}
+.detel a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: navajowhite;
+    font-weight: bold;
+    color: rgb(210, 192, 192);
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 10px;
+
+}
+
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+
+}
+.images img{
+    height: 100%;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition:bottom 1s,left 1s;
+
+}
+.images :hover.shape{
+    bottom: 40px;
+
+}
+#home, #services, #hire-me, #contact {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#home h2, #services h2, #hire-me h2, #contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#services ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#services ul li {
+    margin: 0 20px;
+    font-size: 24px;
+}
+
+#hire-me a.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#contact form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+}
+
+#contact input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+<style>
+    /* Add styling for the section containers */
+    section {
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    /* Add styling for the home section */
+    #home {
+        background-color: rgb(113, 118, 120);
+    }
+
+    #home h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: white;
+    }
+
+    #home p {
+        font-size: 20px;
+        color: white;
+    }
+
+    /* Add styling for the about section */
+    #about {
+        background-color: lightgray;
+    }
+
+    #about h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: black;
+    }
+
+    #about p {
+        font-size: 20px;
+        color: black;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+</style>
+
+
+php
+Copy code
+<style>
+    /* Add styling for the CV section */
+    #cv {
+        background-color: lightgray;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    #cv h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: black;
+    }
+
+    #cv a {
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+    }
+</style>
+
+<style>
+   
+    section {
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    /* Add styling for the services section */
+    #services {
+        background-color: rgb(224, 163, 57);
+    }
+
+    #services h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: white;
+    }
+
+    #services .service {
+        display: inline-block;
+        width: 300px;
+        margin: 20px;
+        text-align: left;
+        color: white;
+    }
+
+    #services .service h3 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    #services .service p {
+        font-size: 20px;
+        color: white;
+    }
+
+    /* Add styling for the hire me section */
+    #hire-me {
+        background-color: lightgray;
+    }
+
+    #hire-me h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: black;
+    }
+
+    #hire-me button {
+        padding: 20px 40px;
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        border-radius: 30px;
+        font-size: 20px;
+        margin-top: 40px;
+    }
+
+    /* Add styling for the contact section */
+    #contact {
+        background-color: rgb(242, 166, 52);
+    }
+
+    #contact h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: white;
+    }
+
+    #contact form {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    #contact form label,
+    #contact form input,
+    #contact form textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid rgb(224, 138, 18);
+    }
+
+    #contact form input[type="submit"] {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 20px 40px;
+        margin-top: 40px;
+    }
+
+    /* Add styling for the CV section */
+    #cv {
+        background-color: lightgray;
+    }
+
+    #cv h2 {
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: black;
+    }
+
+    #cv a {
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+    }
+</style>
+
+
+    .about-section {
+        padding: 80px 0;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
+      
+      .about-section h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+      .about-section p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+      }
+      
+      .about-section .profile-picture {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      
+      .about-section .profile-picture img {
+        width: 100%;
+      }
+      
+      .about-section .details {
+        margin-top: 40px;
+      }
+      
+      .about-section .details h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .about-section .details p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      
+      .about-section .details .social-links {
+        margin-top: 20px;
+      }
+      
+      .about-section .details .social-links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #333;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .about-section .details .social-links a:hover {
+        background-color: #0077ff;
+        color: #fff;
+      }
+      .about-section {
+        padding: 80px 0;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
+      
+      .about-section h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      
+      .about-section p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+      }
+      
+      .about-section .profile-picture {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      
+      .about-section .profile-picture img {
+        width: 100%;
+      }
+      
+      .about-section .details {
+        margin-top: 40px;
+      }
+      
+      .about-section .details h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      
+      .about-section .details p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      
+      .about-section .details .social-links {
+        margin-top: 20px;
+      }
+      
+      .about-section .details .social-links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #333;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .about-section .details .social-links a:hover {
+        background-color: #0077ff;
+        color: #fff;
+      }
+      
+      
+   
